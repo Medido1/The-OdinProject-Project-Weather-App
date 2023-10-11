@@ -1,0 +1,170 @@
+:root {
+  --sky_100: #e0f2fe;
+  --sky_300: #7dd3fc;
+  --sky_500: #0ea5e9;
+  --violet_500: #8b5cf6;
+}
+
+/* css reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* styling */
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.header,
+.footer {
+  background-color: var(--sky_100);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  justify-content: space-between;
+}
+
+.footer {
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+#search_city {
+  height: 2rem;
+  padding: 0.25rem;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid var(--sky_500);
+  background-color: transparent;
+  font-size: 1.25rem;
+  transition: border-bottom 200ms ease-in-out;
+}
+
+#search_city::placeholder {
+  opacity: 0.5;
+}
+
+#search_city:focus {
+  border-bottom: 3px solid var(--sky_500);
+}
+
+.unit_btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--sky_300);
+  font-size: 0.875rem;
+  transition:
+    background-color 200ms ease-in-out,
+    transform 200ms ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--sky_500);
+  transform: scale(1.1);
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.forecast {
+  display: flex;
+  gap: 1rem;
+}
+
+.current_condition {
+  height: 45vh;
+}
+
+.current_condition,
+.next_day {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  background-color: rgba(240, 240, 240, 0.7);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 26vw;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.city_name {
+  font-size: 2rem;
+}
+
+.country_and_time {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.future_icon {
+  width: 50px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .header,
+  .main,
+  .forecast {
+    flex-direction: column;
+  }
+  .header {
+    gap: 1rem;
+  }
+  .current_condition,
+  .next_day {
+    width: 60vw;
+    gap: 0.5rem;
+  }
+}

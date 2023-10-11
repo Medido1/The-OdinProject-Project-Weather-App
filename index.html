@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/cloudy.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <script src="./forecast.js" defer></script>
+    <title>My Weather</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>My Weather</h1>
+      <form>
+        <input
+          type="search"
+          name="search_city"
+          id="search_city"
+          aria-label="search city name"
+          placeholder="search city name"
+          autocomplete="off"
+        />
+      </form>
+      <div class="unit_btns">
+        <button class="btn" data-celsius-btn>Celsius</button>
+        <button class="btn" data-Fahrenheit-btn>Fahrenheit</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="current_condition">
+        <div class="loading">Loading...</div>
+        <h2 class="city_name"></h2>
+        <div class="country_and_time">
+          <p class="country_name"></p>
+          <p class="local_time"></p>
+        </div>
+        <p class="current_condition_text"></p>
+        <img src="#" alt="icon" class="icon" />
+        <p class="temp"></p>
+        <p class="humidity"></p>
+      </div>
+      <div class="forecast"></div>
+    </main>
+
+    <footer class="footer">
+      <a href="https://github.com/Medido1">Bousalah Nadir</a>
+      <p></p>
+      <script>
+        document.querySelector(".footer p").textContent =
+          new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>
