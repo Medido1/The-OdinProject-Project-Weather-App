@@ -73,7 +73,7 @@ function displayForecast(data) {
 async function getForecast(name = "laghouat") {
   try {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=fd6c3350dfb74824819173848232308&q=${name}&days=3`,
+      `https://api.weatherapi.com/v1/forecast.json?key=fd6c3350dfb74824819173848232308&q=${name}&days=3`,
       { mode: "cors" },
     );
     forecastData = await response.json();

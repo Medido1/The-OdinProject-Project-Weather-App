@@ -72,7 +72,7 @@ async function getData(cityName = "laghouat") {
   loading(true);
   try {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=fd6c3350dfb74824819173848232308&q=${cityName}`,
+      `https://api.weatherapi.com/v1/current.json?key=fd6c3350dfb74824819173848232308&q=${cityName}`,
       { mode: "cors" },
     );
     currentData = await response.json();
