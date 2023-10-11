@@ -16,13 +16,13 @@ function displayBackground(currentCondition) {
   const main = document.querySelector(".main");
 
   const conditionBackgrounds = {
-    Overcast: "url(./images/overcast.jpg)",
-    Sunny: "url(./images/sunny.jpeg)",
-    Mist: "url(./images/mist.jpg)",
-    "Partly cloudy": "url(./images/partly_cloudy.jpg)",
-    Clear: "url(./images/clear.jpg)",
-    "Moderate rain": "url(./images/moderate_rain.jpg)",
-    "Light rain": "url(./images/light_rain.jpg)",
+    'Overcast': "url(./images/overcast.jpg)",
+    'Sunny': "url(./images/sunny.jpeg)",
+    'Mist': "url(./images/mist.jpg)",
+    'Partly cloudy': "url(./images/partly_cloudy.jpg)",
+    'Clear': "url(./images/clear.jpg)",
+    'Moderate rain': "url(./images/moderate_rain.jpg)",
+    'Light rain': "url(./images/light_rain.jpg)",
   };
 
   if (conditionBackgrounds.hasOwnProperty(currentCondition)) {
